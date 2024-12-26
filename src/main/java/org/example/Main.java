@@ -17,7 +17,7 @@ public class Main {
         System.out.println("наибольший радиус " + maxCircle.radius);
     }
 }
-
+//ttssasd
 
 class Circle implements Comparable<Circle> {
     public double radius;
