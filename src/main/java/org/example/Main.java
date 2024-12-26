@@ -8,7 +8,9 @@ public class Main {
         List<Circle> circles = new ArrayList<Circle>();
         circles.add(new Circle(12));
         circles.add(new Circle(100.00));
-        circles.add( new Circle(540.00));
+        circles.add(new Circle(0.00));
+
+
 
         Circle maxCircle = Collections.max(circles);
 
@@ -19,7 +21,11 @@ public class Main {
 
 class Circle implements Comparable<Circle> {
     public double radius;
+
     public Circle(double radius) {
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Радиус не может быть отрицательным: " + radius);
+        }
         this.radius = radius;
     }
 
